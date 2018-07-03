@@ -124,6 +124,47 @@
     <header class="article-header">
         
         <h1 itemprop="name">
+            <a href="/2018/07/03/免编译升级-Ubuntu-内核/">免编译升级 Ubuntu 内核</a>
+        </h1>
+        
+        <div class="article-meta clearfix">
+            <a class="article-date" href="/2018/07/03/免编译升级-Ubuntu-内核/">
+    
+    <i class="icon-calendar"></i>
+    
+    <time datetime="2018-07-03T07:07:05.000Z" itemprop="datePublished">2018-07-03</time>
+</a>
+
+            
+<div class="article-tag-list">
+    <i class="icon-tag"></i>
+    <a class="article-tag-link" href="/tags/Ubuntu/">Ubuntu</a>
+</div>
+
+
+        </div>
+    </header>
+    
+    <section class="article-body markdown-body">
+        
+        <p>很多 Ubuntu 用户都会碰到内核需要升级的情况，比如需要尝鲜，需要升级内核以支持新硬件/新特性 之类。<br>然而又不想花时间从源码编译配置内核，那怎么办？</p>
+<p>好在官方有现成的内核 DEB 包，这样就可以省去很多事。<br>地址在此：<a href="http://kernel.ubuntu.com/~kernel-ppa/mainline/" target="_blank" rel="noopener">http://kernel.ubuntu.com/~kernel-ppa/mainline/</a></p>
+<h2 id="使用方法："><a href="#使用方法：" class="headerlink" title="使用方法："></a>使用方法：</h2><p>首先，找到内核安装包下载页面之后，选择你的架构。<br>这个请自己判断，当初装了什么架构的 Ubuntu 各位应该知道。</p>
+<h3 id="下载内核："><a href="#下载内核：" class="headerlink" title="下载内核："></a>下载内核：</h3><p>在大多数情况下，我建议各位下载 headers headers-generic image-generic 三个软件包，这个适用于大多数计算机。（image 是内核本身，headers* 是头文件，驱动安装和运行一些应用时需要用到头文件，最好装上）<br>如果有特殊需求需要下载 low-latency 的话，下载 headers headers-lowlatency generic。</p>
+<h3 id="安装内核："><a href="#安装内核：" class="headerlink" title="安装内核："></a>安装内核：</h3><p>安装很简单，打开终端：<br>sudo dpkg -i 软件包名就行。</p>
+<p>一般情况下不需要补充依赖，如果需要补充依赖的话<br>sudo apt-get -f install 就行。</p>
+<p>此外友情提醒：升级内核是一件大事，请升级内核之前妥善备份好您的数据。<br>如果升级内核之后无法开机，请在启动菜单中选择“高级选项（Advanced）”，然后选择旧内核启动。</p>
+
+        
+    </section>
+</article>
+
+
+    <article class="article" itemscope itemprop="blogPost">
+    
+    <header class="article-header">
+        
+        <h1 itemprop="name">
             <a href="/2018/07/02/在-Mac-上运行-Ubuntu/">在 Mac 上运行 Ubuntu</a>
         </h1>
         
